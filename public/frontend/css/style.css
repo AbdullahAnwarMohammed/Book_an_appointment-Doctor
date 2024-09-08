@@ -1,0 +1,126 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Almarai", sans-serif;
+
+}
+
+#header {
+    background: #f5f5f5;
+    padding: 5px 0;
+    border-bottom: 2px solid #eee;
+}
+
+
+#ads {
+    width: 100%;
+    height: 50px;
+    background: #ffe480;
+}
+
+#content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input,
+select {
+    padding: 15px !important;
+}
+
+
+button:hover{
+    cursor: pointer !important;
+}
+#banner {
+    width: 100%;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    position: relative;
+    z-index: 1;
+    background-size: 100% 100%;
+
+  }
+  @media only screen and (max-width: 800px) {
+    #banner {
+        height: 280px;
+
+
+    }
+  }
+  
+#banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity here */
+    z-index: -1;
+  }
+#banner .contanerBanner{
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#banner .contanerBanner .buttons{
+    width: 50%;
+    text-align: center;
+}
+.btn-relative {
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    position: absolute;
+    right: 0;
+    top:30%;
+    z-index: 9999;
+
+}
+
+
+.news-ticker {
+    width: 100%;
+    overflow: hidden;
+    color: #000;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+    direction: rtl;
+}
+
+.ticker-container {
+    display: flex;
+    width: max-content;
+    animation: ticker-scroll 40s linear infinite;
+}
+
+.ticker-item {
+    padding: 0 5px;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
